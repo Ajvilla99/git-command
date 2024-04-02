@@ -6,8 +6,7 @@
 * **git -config**: Este comando va bien para establecer las opciones de configuración para instalar Git. Normalmente, solo es necesario usarlo inmediatamente después de instalar Git en un nuevo equipo de desarrollo.
 
  - **git config --global user.email**: Este ejemplo escribe el valor your_email@example.com en el nombre de configuración user.email. La marca --global la usa para que se defina este valor para el usuario actual del sistema operativo.
-    > [!NOTE]
-    >### Formas de uso:
+    ### Formas de uso:
         *   git config --global user.email "your_email@example.com"
         *   git config --global user.email = your_email@example.com
 
