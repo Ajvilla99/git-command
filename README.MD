@@ -8,8 +8,8 @@
  - **git config --global user.email**: Este ejemplo escribe el valor your_email@example.com en el nombre de configuración user.email. La marca --global la usa para que se defina este valor para el usuario actual del sistema operativo.
     > [!NOTE]
     >### Formas de uso:
-        >*   git config --global user.email "your_email@example.com"
-        >*   git config --global user.email = your_email@example.com
+        *   git config --global user.email "your_email@example.com"
+        *   git config --global user.email = your_email@example.com
 
 # **PALABRAS CLAVES**
     * Merge: Es la unión de dos o más ramas
