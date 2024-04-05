@@ -111,11 +111,16 @@ Este comando se encarga de guardar cambios en el historial de Git.
 
        git reset --hard "hash_del_commit"
 
-> [!IMPORTANT] **git reflog**:      Muestra la lista completa de referencias utiliz adas por Git para hacer checkout, branching o 
+### [!] **GIT REFLOG**
+
+Muestra la lista completa de referencias utiliz adas por Git para hacer checkout, branching o  revertir a commits anteriores.
+
+
+
 
        git reflog
 
-[!IMPORTANT]
+> [!]
 
     
 
