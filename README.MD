@@ -5,6 +5,8 @@
 
         git help
 
+## **GIT CONFIG**
+
 * **git -config**: Este comando va bien para establecer las opciones de configuración para instalar Git. Normalmente, solo es necesario usarlo inmediatamente después de instalar Git en un nuevo equipo de desarrollo.
 
         git -config
@@ -20,6 +22,14 @@
  * **git config --global -e**: 
 
         git config --global -e
+
+ * **git config --global alias**:   Muestra o modifica los alias de los comando.
+
+        git config --global alias."añadir_alias" "Añadir_comando_al_alias" 
+
+>Por ejemplo para hacer un **status --short**.
+
+        git config --global alias.s "status --short"
 
  * **git init** : Inicializa un directorio como un  repositorio de git.
 
@@ -38,13 +48,92 @@
 
         git checkout -- .
 
+
+ * **git status**: Lista un estado actual del repositorio con lista de archivos modificados o agregados.
+
+        * 
+
+
  * **git log**: Muestra los logs de los commits realizados.
 
         git log 
 
- * ****:
+    
+ * **git branch**: Se encarga de mostrar cuales son las ramas del proyecto.
 
-        * 
+         git branch
+
+    
+ * **git config --global init.defaultBranch**: Indica la rama predeterminada que se utilizará al inicializar un nuevo repositorio.
+
+        git config --global init.defaultBranch nombre_de_la_rama
+    
+# **GIT ADD**
+
+Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así puedes preparar una instantánea antes de confirmar en el historial oficial.
+
+> **git add .** -    
+       
+       git add
+
+* **git add .**:     
+
+       git add
+
+* **git add .**:     
+
+       git add
+
+
+# **GIT COMMIT**
+
+* **git commit**: Guardar cambios en el historial de Git.
+
+       git commit
+       
+>  **-m**  "Comentario sobre lo que se ha hecho y/o modificado"
+
+       git commit -m "comentario"
+       
+>  **-am**  ""
+
+> a
+
+> b
+
+       git commit -am "comentario"
+       
+>  **-m**  ""
+
+       git commit -m "comentario"
+                
+>  **-m**  ""
+
+       git commit -m "comentario"
+         
+<!--     
+ * ****: 
+
+         #
+    
+ * ****: 
+
+         #
+    
+ * ****: 
+
+         #
+    
+ * ****: 
+
+         #
+    
+ * ****: 
+
+         # -->
+
+
+         
 
     
 
