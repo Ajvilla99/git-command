@@ -115,7 +115,7 @@ Este comando se encarga de guardar cambios en el historial de Git.
 
        git reflog
 
-         
+[!IMPORTANT]
 
     
 
