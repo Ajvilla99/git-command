@@ -87,51 +87,33 @@ Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así
 
 # **GIT COMMIT**
 
-* **git commit**: Guardar cambios en el historial de Git.
+Este comando se encarga de guardar cambios en el historial de Git.
 
-       git commit
-       
->  **-m**  "Comentario sobre lo que se ha hecho y/o modificado"
+## **COMANDOS**
 
-       git commit -m "comentario"
-       
->  **-am**  ""
-
-> a
-
-> b
-
-       git commit -am "comentario"
-       
->  **-m**  ""
+>**git commit -m**  "Comentario sobre lo que se ha hecho y/o modificado"
 
        git commit -m "comentario"
+       
+>  **git commit --amend -m**: Modificar el mensaje del último commit con un nuevo mensaje.
+
+       git commit --amend -m "Mensaje_actualizado_del_commit"
                 
->  **-m**  ""
+> **git reset --soft HEAD^<"number_commits"> || hash del commit**: Deshacer el ultimo commit, pero sin perder los cambios realizados.
 
-       git commit -m "comentario"
+       git commit -m "comentario" || "hash"
          
-<!--     
- * ****: 
+> **git reset --mixed**: Deshacer los últimos cambios realizados pero mantenerlos en la memoria para su uso posterior.
 
-         #
-    
- * ****: 
+       got reset --mixed "hash_del_commit"
 
-         #
-    
- * ****: 
+> [!IMPORTANT] **git reset --hard**: Elimina todos los cambios realizados después del hash indicado incluyendo el propio.
 
-         #
-    
- * ****: 
+       git reset --hard "hash_del_commit"
 
-         #
-    
- * ****: 
+> [!IMPORTANT] **git reflog**:      Muestra la lista completa de referencias utiliz adas por Git para hacer checkout, branching o 
 
-         # -->
-
+       git reflog
 
          
 
@@ -143,3 +125,5 @@ Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así
 
 > **Merge**: Es la unión de dos o más ramas
 
+<!-- Log
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all" -->
