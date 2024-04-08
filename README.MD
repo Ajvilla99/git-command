@@ -52,12 +52,12 @@
 
 **git status**: Lista un estado actual del repositorio con lista de archivos modificados o agregados.
 
-        * 
+       git status
 
 
 **git log**: Muestra los logs de los commits realizados.
 
-        git log 
+       git log
 
     
 ### **GIT BRANCH**
@@ -169,7 +169,8 @@ tag anotados:
 ### [!] **GIT RESET --HARD**
 Elimina todos los cambios realizados después del hash indicado incluyendo el propio.
 
-* Tambien deja volver al commit anterior, pero sin perder los commits posteriores.
+> [!NOTE]
+> Tambien deja volver al commit anterior, pero sin perder los commits posteriores.
 
        git reset --hard "hash_del_commit"
 
