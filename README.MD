@@ -199,8 +199,7 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 * **`??`**: No se le esta dando seguimiento al archivo en el repositorio.<br><br>
 
 
-- :EMOJICODE:grinning:
-- :grinning:
+* ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+)
 
 # CONFIGURACIONES RECOMENDADAS
 Para git Log:
