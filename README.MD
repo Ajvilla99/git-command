@@ -198,12 +198,11 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 ### **`Fast-forward`**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.
 ### **`??`**: No se le esta dando seguimiento al archivo en el repositorio.
 
+---
+<br>
 
-> [!NOTA]
-> Useful information that users should know, even when skimming content.
+# CONFIGURACIONES DE ALIAS RECOMENDADAS:
 
-
-# CONFIGURACIONES RECOMENDADAS
-Para git Log:
+Para git log
 
        git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
