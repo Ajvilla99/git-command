@@ -152,7 +152,8 @@ Para crear un tag:
        git tag "tag_name"
 
 Para crear un tag anotado en un commit específico:
->**`-a: `** Para que sea un tag anotado.<br>**`-m: `** Para que tenga un nombre el tag.
+> [!NOTE]
+> **`-a: `** Para que sea un tag anotado.<br>**`-m: `** Para que tenga un nombre el tag.
 
        git tag -a "version_Ej: v0.1.0" "Hash_del_commit" -m "Nombre_del_tag"
 
@@ -187,11 +188,7 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 
        git rm "nombre_del_archivo_a_borrar"
 
-
-
-
-
-    
+---
 
 # **PALABRAS O SIGNOS CLAVES**
 
