@@ -194,7 +194,7 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 
 # **PALABRAS O SIGNOS CLAVES**
 
-> **`Commit`**: Es una captura instantánea del estado actual<br>
+> **`Commit``#0969DA`**: Es una captura instantánea del estado actual<br><br>
 > **`Merge`**: Es la unión de dos o más ramas
 <br>
 <br>
