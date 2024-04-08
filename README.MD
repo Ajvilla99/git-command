@@ -160,7 +160,8 @@ Para borrar el tag:
        
        git tag -d "Nombre_del_tag"
 
->**[!NOTA]** Las etiquetas anotadas se almacenan como objetos completos en la base de datos de Git. Para que quede claro, almacenan metadatos adicionales como los siguientes: el nombre de la persona que etiqueta, su correo electrónico y la fecha. Al igual que las confirmaciones y los mensajes de las confirmaciones, las etiquetas anotadas tienen un mensaje de etiquetado. Además, por seguridad, las etiquetas anotadas pueden firmarse y verificarse con GNU Privacy Guard (GPG). La práctica recomendada para el etiquetado de git es dar preferencia a las etiquetas anotadas por encima de las ligeras, para poder tener todos los metadatos asociados.
+> [!NOTA] 
+> Las etiquetas anotadas se almacenan como objetos completos en la base de datos de Git. Para que quede claro, almacenan metadatos adicionales como los siguientes: el nombre de la persona que etiqueta, su correo electrónico y la fecha. Al igual que las confirmaciones y los mensajes de las confirmaciones, las etiquetas anotadas tienen un mensaje de etiquetado. Además, por seguridad, las etiquetas anotadas pueden firmarse y verificarse con GNU Privacy Guard (GPG). La práctica recomendada para el etiquetado de git es dar preferencia a las etiquetas anotadas por encima de las ligeras, para poder tener todos los metadatos asociados.
 
 tag anotados:
 
@@ -174,13 +175,13 @@ Elimina todos los cambios realizados después del hash indicado incluyendo el pr
 
        git reset --hard "hash_del_commit"
 
-### [!] **GIT REFLOG**
+### **GIT REFLOG**
 
 Muestra la lista completa de referencias utiliz adas por Git para hacer checkout, branching o  revertir a commits anteriores.
 
        git reflog
 
-### [!] **GIT RM**
+### **GIT RM**
 
 Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 
@@ -194,10 +195,10 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 
 # **PALABRAS O SIGNOS CLAVES**
 
-### **`Commit`**: Es una captura instantánea del estado actual.
-### **`Merge`**: Es la unión de dos o más ramas.
-### **`Fast-forward`**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.
-### **`??`**: No se le esta dando seguimiento al archivo en el repositorio.
+* **Commit**: Es una captura instantánea del estado actual.
+* **Merge**: Es la unión de dos o más ramas.
+* **Fast-forward**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.
+* **??** : No se le esta dando seguimiento al archivo en el repositorio.
 
 ---
 <br>
