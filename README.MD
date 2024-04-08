@@ -10,7 +10,7 @@
 
 ## **CONFIGURACIÓN DE GIT**
 
-### **GIT CONFIG**
+## **GIT CONFIG**
 
 **git -config**: Este comando va bien para establecer las opciones de configuración para instalar Git. Normalmente, solo es necesario usarlo inmediatamente después de instalar Git en un nuevo equipo de desarrollo.
 
@@ -64,7 +64,7 @@ git config --global user.email "your_email@example.com"
        git log
 
     
-### **GIT BRANCH**
+## **GIT BRANCH**
 Se encarga de mostrar cuales son las ramas del proyecto.
 
        git branch
@@ -93,12 +93,12 @@ Para configurar la rama con la que queremos iniciar un proyecto utilizamos el si
 
        git config --global init.defaultBranch "nombre_de_la_rama"
 
-### **GIT MERGE**
+## **GIT MERGE**
 Este comando es para fusionar dos ramas en una sola.
        
        git merge "nombre_de_la_rama"
 
-### **GIT ADD**
+## **GIT ADD**
 
 Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así puedes preparar una instantánea antes de confirmar en el historial oficial.
 
@@ -124,7 +124,7 @@ Deshacer el ultimo commit, pero sin perder los cambios realizados.
          
 **git reset --mixed**: Deshacer los últimos cambios realizados pero mantenerlos en la memoria para su uso posterior.
 
-       got reset --mixed "hash_commit"
+       git reset --mixed "hash_commit"
 
 ## **GIT TAG**
 El comando **`git tag`** se utiliza para crear una etiqueta en un punto específico del historial de Git, generalmente para marcar una versión de lanzamiento. Las etiquetas son como ramas que no cambian, y se pueden usar para hacer referencia a un punto específico en el historial de Git. Puedes crear una lista de todas las etiquetas, eliminarlas, compartirlas y más con este comando.
