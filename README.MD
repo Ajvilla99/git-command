@@ -193,10 +193,10 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 
 # **PALABRAS O SIGNOS CLAVES**
 
-* **`Commit`**: Es una captura instantánea del estado actual<br><br>
-* **`Merge`**: Es la unión de dos o más ramas<br><br>
-* **`Fast-forward`**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.<br><br>
-* **`??`**: No se le esta dando seguimiento al archivo en el repositorio.<br><br>
+## **`Commit`**: Es una captura instantánea del estado actual<br><br>
+## **`Merge`**: Es la unión de dos o más ramas<br><br>
+## **`Fast-forward`**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.<br><br>
+## **`??`**: No se le esta dando seguimiento al archivo en el repositorio.<br><br>
 
 
 > [!NOTE]
