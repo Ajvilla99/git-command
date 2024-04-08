@@ -59,22 +59,49 @@
         git log 
 
     
- * **git branch**: Se encarga de mostrar cuales son las ramas del proyecto.
+### **GIT BRANCH**
+Se encarga de mostrar cuales son las ramas del proyecto.
 
-         git branch
+       git branch
+
+Para crear una rama usaremos este comando:
+       
+       git branch "nombre_de_la_rama"
+
+Para cambiar de rama usaremos este comando:
+
+       git checkout "nombre_de_la_rama"
+
+Para crear y cambiar de rama usaremos este comando:
+
+       git checkout -b "nombre_de_la_rama"
+
+Para eliminar una rama usaremos este comando:
+
+       git branch -d "nombre_de_la_rama"
+
+Para eliminar una rama de manera forzada agregamos -f usaremos este comando:
+
+       git branch -d "nombre_de_la_rama" -f
+
 
     
- * **git config --global init.defaultBranch**: Indica la rama predeterminada que se utilizará al inicializar un nuevo repositorio.
+Para configurar la rama con la que queremos iniciar un proyecto utilizamos el siguiente comando:
 
-        git config --global init.defaultBranch nombre_de_la_rama
-    
-# **GIT ADD**
+       git config --global init.defaultBranch "nombre_de_la_rama"
+
+### **GIT MERGE**
+Este comando es para fusionar dos ramas en una sola.
+       
+       git merge "nombre_de_la_rama"
+
+### **GIT ADD**
 
 Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así puedes preparar una instantánea antes de confirmar en el historial oficial.
 
-> **git add .** -    
+Este comando agrega todos los archivos del repositorio.
        
-       git add
+       git add .
 
 * **git add .**:     
 
@@ -107,7 +134,43 @@ Este comando se encarga de guardar cambios en el historial de Git.
 
        got reset --mixed "hash_del_commit"
 
-> [!IMPORTANT] **git reset --hard**: Elimina todos los cambios realizados después del hash indicado incluyendo el propio.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+### [!] **GIT TAG**
+El comando **`git tag`** se utiliza para crear una etiqueta en un punto específico del historial de Git, generalmente para marcar una versión de lanzamiento. Las etiquetas son como ramas que no cambian, y se pueden usar para hacer referencia a un punto específico en el historial de Git. Puedes crear una lista de todas las etiquetas, eliminarlas, compartirlas y más con este comando.
+
+Para ver los tag que tenemos:
+
+       git tag
+
+Para ver un `Tag` en especifico:
+
+       git show "tag_name"
+
+Para crear un tag:
+>`[!IMPORTANT]` Creara un tag en el ultimo commit realizado.
+
+       git tag "tag_name"
+
+Para crear un tag anotado en un commit específico:
+>**`-a: `** Para que sea un tag anotado.<br>**`-m: `** Para que tenga un nombre el tag.
+
+       git tag -a "version_Ej: v0.1.0" "Hash_del_commit" -m "Nombre_del_tag"
+
+Para borrar el tag:
+       
+       git tag -d "Nombre_del_tag"
+
+>**[!NOTA]** Las etiquetas anotadas se almacenan como objetos completos en la base de datos de Git. Para que quede claro, almacenan metadatos adicionales como los siguientes: el nombre de la persona que etiqueta, su correo electrónico y la fecha. Al igual que las confirmaciones y los mensajes de las confirmaciones, las etiquetas anotadas tienen un mensaje de etiquetado. Además, por seguridad, las etiquetas anotadas pueden firmarse y verificarse con GNU Privacy Guard (GPG). La práctica recomendada para el etiquetado de git es dar preferencia a las etiquetas anotadas por encima de las ligeras, para poder tener todos los metadatos asociados.
+
+tag anotados:
+
+       git tag -a "nombre_del_tag"
+
+### [!] **GIT RESET --HARD**
+Elimina todos los cambios realizados después del hash indicado incluyendo el propio.
+
+* Tambien deja volver al commit anterior, pero sin perder los commits posteriores.
 
        git reset --hard "hash_del_commit"
 
@@ -115,20 +178,37 @@ Este comando se encarga de guardar cambios en el historial de Git.
 
 Muestra la lista completa de referencias utiliz adas por Git para hacer checkout, branching o  revertir a commits anteriores.
 
-
-
-
        git reflog
 
-> [!]
+### [!] **GIT RM**
+
+Para eliminar archivos o carpetas, utilizamos el siguiente comando:
+
+       git rm "nombre_del_archivo_a_borrar"
+
+
+
+
 
     
 
-# **PALABRAS CLAVES**
+# **PALABRAS O SIGNOS CLAVES**
 
-> **Commit**: Es una captura instantánea del estado actual
+> **`Commit`**: Es una captura instantánea del estado actual
+<br>
+<br>
+> **`Merge`**: Es la unión de dos o más ramas
+<br>
+<br>
+> **`Fast-forward`**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.
+<br>
+<br>
+> **`??`**: No se le esta dando seguimiento al archivo en el repositorio.
+<br>
+<br>
 
-> **Merge**: Es la unión de dos o más ramas
 
-<!-- Log
-git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all" -->
+# CONFIGURACIONES RECOMENDADAS
+Para git Log:
+
+       git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
