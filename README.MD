@@ -202,7 +202,7 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
 
-> [!NOTE]
+> [NOTE]
 > Useful information that users should know, even when skimming content.
 
 # CONFIGURACIONES RECOMENDADAS
