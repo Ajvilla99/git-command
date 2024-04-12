@@ -179,6 +179,57 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 
        git rm "nombre_del_archivo_a_borrar"
 
+## **GIT STASH** 
+
+Guarda temporalmente los cambios que no se han confirmado aun y devuelve al directorio actual.
+
+       git stash
+
+Para guardar un stash con nombre
+
+       git stash save "stash_name"
+
+Para ver los cambios en un stash
+
+       git stash show "hash_del_stash"
+
+Para mostrar todos los stash guardados.
+
+       git stash list
+
+Para mostrar mas informacion en el stash list
+
+       git stash list --stat
+
+Trae los cambios que estan en el ultimo stash de tu directorio y borra el stash
+
+       git stash pop
+
+Para recuperar stash en especifico.
+
+       git stash apply "hash_del_stash" || stash@{2}
+
+Para elimina un stash en especifico.
+
+       git stash drop "hash_del_stash"
+
+Para limpiar todos los stash guardados.
+
+       git stash clear
+
+## **GIT REBASE**
+
+> [!NOTE]
+> El comando git rebase es una herramienta de Git que se utiliza para combinar dos o más ramas en una sola. A diferencia del comando git merge, que crea una nueva confirmación de combinación, git rebase mueve los cambios de una rama a otra de manera lineal, sin crear una nueva confirmación de combinación.
+
+
+
+<!-- 
+- Ordenar commits
+- Corregir mensajes de los commits
+- Unir commits
+- separar commits -->
+
 ---
 
 ## **PALABRAS O SIGNOS CLAVES**
@@ -186,13 +237,14 @@ Para eliminar archivos o carpetas, utilizamos el siguiente comando:
 * **Commit**: Es una captura instantánea del estado actual.
 * **Merge**: Es la unión de dos o más ramas.
 * **Fast-forward**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.
-* **??** : No se le esta dando seguimiento al archivo en el repositorio.
+* **??**: No se le esta dando seguimiento al archivo en el repositorio.
+* **Stash**: Es una forma de guardar temporalmente los cambios locales sin tener que hacer un commit. Esto es útil cuando necesitas cambiar de rama o hacer otro cambio sin perder los cambios que has hecho.
 
 ---
 <br>
 
 ## **CONFIGURACIONES DE ALIAS RECOMENDADAS**
 
-Este texto te mostarara de forma resumida y visualmente los commits hechos.
+Este alias te mostarara de forma resumida y visualmente los commits hechos.
 
        git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
