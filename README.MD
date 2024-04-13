@@ -13,24 +13,25 @@ Git muestra todos los comandos disponibles.
 ## **CONFIGURACIÓN DE GIT**
 
 ## **GIT CONFIG**
-
-**git -config**: Este comando va bien para establecer las opciones de configuración para instalar Git. Normalmente, solo es necesario usarlo inmediatamente después de instalar Git en un nuevo equipo de desarrollo.
+Este comando va bien para establecer las opciones de configuración para instalar Git. Normalmente, solo es necesario usarlo inmediatamente después de instalar Git en un nuevo equipo de desarrollo.
 
        git -config
 
-**git config --global user.name**: Configurar Nombre que salen en los commits.
+* **GIT CONFIG --GLOBAL USER.NAME**<br>
+Configura el nombre que saldra en los commits.
 
        git config --global user.name "your_name"
 
-**git config --global user.email**: Este ejemplo escribe el valor your_email@example.com en el nombre de configuración user.email. La marca --global la usa para que se defina este valor para el usuario actual del sistema operativo.
+* **GIT CONFIG --GLOBAL USER.EMAIL**<br>
+Este ejemplo escribe el valor your_email@example.com en el nombre de configuración user.email. La marca --global la usa para que se defina este valor para el usuario actual del sistema operativo.
 
 git config --global user.email "your_email@example.com"
 
-**git config --global -e**: 
+**GIT CONFIG --global -e**: 
 
        git config --global -e
 
-**git config --global alias**:   Muestra o modifica los alias de los comando.
+**GIT CONFIG --global alias**:   Muestra o modifica los alias de los comando.
 
        git config --global alias."añadir_alias" "Añadir_comando_al_alias" 
 
