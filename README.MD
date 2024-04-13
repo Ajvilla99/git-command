@@ -1,10 +1,12 @@
 # **COMANDOS DE GIT**
 
-**git --version** : Ver la version que tienes instalada en el dispositivo.
+### **GIT --VERSION**
+Ver la version que tienes instalada en el dispositivo.
 
        git -v
 
-**git help** : Git muestra todos los comandos disponibles.
+### **GIT HELP**
+Git muestra todos los comandos disponibles.
 
        git help
 
@@ -36,25 +38,54 @@ git config --global user.email "your_email@example.com"
 
        git config --global alias.s "status --short"
 
-**git init** : Inicializa un directorio como un  repositorio de git.
+---
+
+## **CREACION DE REPOSITORIO**
+
+### **GIT INIT**
+Inicializa un directorio local como un repositorio de git.
 
        git init
 
-**git add** : Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así puedes preparar una instantánea antes de confirmar en el historial oficial.
+### **GIT ADD**
+Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así puedes preparar una instantánea antes de confirmar en el historial oficial.
 
-       git add nombre_del_archivo o git add . (agrega todo)
+1. Agrega un archivo en especifico.
 
-**git commit -m**: Confirma la instantánea preparada en el historial del proyecto. En combinación con git add, define el flujo de trabajo básico de todos los usuarios de Git.
+       git add nombre_del_archivo
 
-       git commit -m "Mensaje_del_commit"
+2. Agrega todos los archivos del directorio actual a la.
 
-**git Checkout**: Además de extraer las confirmaciones y las revisiones de archivos antiguas, git checkout también sirve para navegar por las ramas existentes. Combinado con los comandos básicos de Git, es una forma de trabajar en una línea de desarrollo concreta.
-    > Devuelve los archivos al ultimo commit, ( Solo los archivos que se les esta dando seguimiento por GIT )
+       git add .
+
+3. Para agregar archivos con extenciónes específicas, por ejemplo solo los **`HTML`**
+
+       git add *.html
+       
+
+### **GIT COMMIT**
+Confirma la instantánea preparada en el historial del proyecto. En combinación con git add, define el flujo de trabajo básico de todos los usuarios de Git.
+
+       git commit -m "commit_message"
+
+La opción -am es para hacer un commit de los cambios en el área de ensayo (stage) y agregar un mensaje de commit en una sola línea.
+
+       git commit -am "commit_message"
+
+### **GIT CHECKOUT**
+Además de extraer las confirmaciones y las revisiones de archivos antiguas, git checkout también sirve para navegar por las ramas existentes. Combinado con los comandos básicos de Git, es una forma de trabajar en una línea de desarrollo concreta.
+> Devuelve los archivos al ultimo commit, ( Solo los archivos que se les esta dando seguimiento por GIT )
 
         git checkout -- .
 
+Para devolver un archivo en especifico al ultimo commit:
 
-**git status**: Lista un estado actual del repositorio con lista de archivos modificados o agregados.
+       git checkout -- "nombre_del_archivo"
+
+
+
+### **GIT STATUS**
+Lista un estado actual del repositorio con lista de archivos modificados o agregados.
 
        git status
 
@@ -222,7 +253,23 @@ Para limpiar todos los stash guardados.
 > [!NOTE]
 > El comando git rebase es una herramienta de Git que se utiliza para combinar dos o más ramas en una sola. A diferencia del comando git merge, que crea una nueva confirmación de combinación, git rebase mueve los cambios de una rama a otra de manera lineal, sin crear una nueva confirmación de combinación.
 
+       git rebase
 
+Para unir commits **( UNO DE LOS MAS USADOS )**:
+> **-i** : Significa  interactivo, te permite editar cada commit antes de aplicarlo.<br>
+> **HEAD** : Es una referencia al último commit de la rama actual<br>
+> **~** : Este caracter se usa para señalar la cantidad de commits a los que se les aplicara el rebase.
+
+       git rebase -i HEAD~4
+
+- **`reword`**: Cambia el mensaje del commit sin tocar el codigo.<br>
+
+
+- **`edit`**:
+
+Para finalizar un rebase interactivo
+
+       git rebase --continue
 
 <!-- 
 - Ordenar commits
@@ -239,6 +286,7 @@ Para limpiar todos los stash guardados.
 * **Fast-forward**: Union sin problemas ya que no existen commits en la rama a la cual unimos los cambios.
 * **??**: No se le esta dando seguimiento al archivo en el repositorio.
 * **Stash**: Es una forma de guardar temporalmente los cambios locales sin tener que hacer un commit. Esto es útil cuando necesitas cambiar de rama o hacer otro cambio sin perder los cambios que has hecho.
+* **Squash**: Unir varios commits en uno solo.
 
 ---
 <br>
