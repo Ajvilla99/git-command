@@ -1,5 +1,7 @@
 # **COMANDOS DE GIT**
 
+![prueba](./img/explicacion-push-url.jpg)
+
 ### **GIT --VERSION**
 Ver la version que tienes instalada en el dispositivo.
 
@@ -51,6 +53,8 @@ Inicializa un directorio local como un repositorio de git.
 ### **GIT ADD**
 Mueve los cambios del directorio de trabajo al área del entorno de ensayo. Así puedes preparar una instantánea antes de confirmar en el historial oficial.
 
+### **COMANDOS**
+
 1. Agrega un archivo en especifico.
 
        git add nombre_del_archivo
@@ -83,7 +87,10 @@ Para devolver un archivo en especifico al ultimo commit:
 
        git checkout -- "nombre_del_archivo"
 
-
+### **GIT REMOTE**
+Agrega o muestra el control remoto para una URL dada.
+       
+       git remote -v
 
 ### **GIT STATUS**
 Lista un estado actual del repositorio con lista de archivos modificados o agregados.
@@ -153,7 +160,30 @@ Modificar el mensaje del último commit con un nuevo mensaje.
 Deshacer el ultimo commit, pero sin perder los cambios realizados.
 
        git commit -m "comment" || "hash"
+
+## **GIT PULL**
+Es un comando de Git utilizado para actualizar la versión local de un repositorio desde otro remoto
+
+### **COMANDOS**
+
+1. Para traer los cambios a tu repositorio local (Fusionar).
+       
+       git pull
          
+       git pull "nombre_del_repositorio" "rama_actual"
+2. Configuraciones recomendadas.
+
+       git config --global pull.ff only
+
+### **CONFIGURACIONES RECOMENDADAS**
+
+1. De esta manera solo se aplicara al proyecto/Repositorio actual.
+
+       git config pull.rebase true
+2. Con este comando se aplicara de manera global.
+
+       git config --global pull.rebase true
+
 **git reset --mixed**: Deshacer los últimos cambios realizados pero mantenerlos en la memoria para su uso posterior.
 
        git reset --mixed "hash_commit"
@@ -288,6 +318,7 @@ Para finalizar un rebase interactivo
 * **??**: No se le esta dando seguimiento al archivo en el repositorio.
 * **Stash**: Es una forma de guardar temporalmente los cambios locales sin tener que hacer un commit. Esto es útil cuando necesitas cambiar de rama o hacer otro cambio sin perder los cambios que has hecho.
 * **Squash**: Unir varios commits en uno solo.
+* **Pull**: Traer los datos que se encuentran en el origen del repositorio.
 
 ---
 <br>
