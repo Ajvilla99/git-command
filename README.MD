@@ -1,6 +1,6 @@
 # **COMANDOS DE GIT**
 
-![prueba](/img/explicacion-push-url.jpg)
+![prueba](img/explicacion-push-url.jpg)
 
 ### **GIT --VERSION**
 Ver la version que tienes instalada en el dispositivo.
