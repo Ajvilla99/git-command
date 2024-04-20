@@ -1,7 +1,5 @@
 # **COMANDOS DE GIT**
 
-![prueba](img/explicacion-push-url.jpg)
-
 ### **GIT --VERSION**
 Ver la version que tienes instalada en el dispositivo.
 
@@ -278,6 +276,11 @@ Para elimina un stash en especifico.
 Para limpiar todos los stash guardados.
 
        git stash clear
+
+## **GIT FETCH**
+se utiliza para descargar los últimos cambios del servidor remoto sin fusionarlos con los cambios locales.
+
+       git fetch
 
 ## **GIT REBASE**
 
