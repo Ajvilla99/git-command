@@ -75,6 +75,15 @@ La opción -am es para hacer un commit de los cambios en el área de ensayo (sta
 
        git commit -am "commit_message"
 
+### **GIT PUSH**
+Envia el contenido al repositorio remoto.
+
+       git push
+
+Para eliminar una rama de manera remota.
+       
+       git push origin :rama
+
 ### **GIT CHECKOUT**
 Además de extraer las confirmaciones y las revisiones de archivos antiguas, git checkout también sirve para navegar por las ramas existentes. Combinado con los comandos básicos de Git, es una forma de trabajar en una línea de desarrollo concreta.
 > Devuelve los archivos al ultimo commit, ( Solo los archivos que se les esta dando seguimiento por GIT )
@@ -106,6 +115,10 @@ Se encarga de mostrar cuales son las ramas del proyecto.
 
        git branch
 
+Muestra una lista de todas las ramas del repositorio, tanto locales como remotas.
+
+       git branch -a
+
 Para crear una rama usaremos este comando:
        
        git branch "nombre_de_la_rama"
@@ -126,9 +139,17 @@ Para eliminar una rama de manera forzada agregamos -f usaremos este comando:
 
        git branch -d "nombre_de_la_rama" -f
 
+Para eliminar una rama de manera remota.
+       
+       git push origin :rama
+
 Para configurar la rama con la que queremos iniciar un proyecto utilizamos el siguiente comando:
 
        git config --global init.defaultBranch "nombre_de_la_rama"
+
+Se utiliza para eliminar las referencias a los objetos que no se encuentran en el repositorio remoto.
+
+       git remote prune origin
 
 ## **GIT MERGE**
 Este comando es para fusionar dos ramas en una sola.
@@ -172,6 +193,10 @@ Es un comando de Git utilizado para actualizar la versión local de un repositor
 2. Configuraciones recomendadas.
 
        git config --global pull.ff only
+3. Para Traer todos los cambios del repositorio ( Trae tambien las ramas ).
+
+       git pull --all
+
 
 ### **CONFIGURACIONES RECOMENDADAS**
 
@@ -206,7 +231,7 @@ Para crear un tag anotado en un commit específico:
 > [!NOTE]
 > **`-a: `** Para que sea un tag anotado.<br>**`-m: `** Para que tenga un nombre el tag.
 
-       git tag -a "version_Ej: v0.1.0" "Hash_del_commit" -m "tag-name"
+       git tag -a version_Ej:v0.1.0 "Hash_del_commit" -m "tag-name"
 
 Para borrar el tag:
        
@@ -218,6 +243,11 @@ Para borrar el tag:
 tag anotados:
 
        git tag -a "tag-name"
+
+
+Para subir todos los tag al repositorio
+
+       git push --tags
 
 ## **GIT RESET --HARD**
 Elimina todos los cambios realizados después del hash indicado incluyendo el propio.
